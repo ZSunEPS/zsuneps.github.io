@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: clumped and isotope, bond reordering, thermal history and paleos</a>
+subtitle: <a href='#'>clumped and isotope, bond reordering, thermal history and paleos</a>
 profile:
   align: right
   image: prof_pic.jpg
