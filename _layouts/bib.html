@@ -45,11 +45,15 @@
         {%- for author in entry.author_array limit: author_array_limit -%}
           {%- assign author_is_self = false -%}
           {%- assign author_last_name = author.last | remove: "¶" | remove: "&" | remove: "*" | remove: "†" | remove: "^" -%}
-          {%- if site.scholar.last_name contains author_last_name -%}
+
+          <!--Now check whether the currect author is myself 'if-else'-->
+          {%- if site.scholar.last_name contains author_last_name -%} 
             {%- if site.scholar.first_name contains author.first -%}
               {%- assign author_is_self = true -%}
             {%- endif -%}
           {%- endif -%}
+
+          <!--Now check whether the coauthor is in our database 'if-else'-->
           {%- assign coauthor_url = nil -%}
           {%- if site.data.coauthors[author_last_name] -%}
             {%- for coauthor in site.data.coauthors[author_last_name] -%}
@@ -60,20 +64,34 @@
             {%- endfor -%}
           {%- endif -%}
 
+
           {%- if forloop.length > 1 -%}
             {%- if forloop.first == false -%},&nbsp;{%- endif -%}
             {%- if forloop.last and author_array_limit == author_array_size -%}and&nbsp;{%- endif -%}
           {%- endif -%}
           {%- if author_is_self -%}
-            <em>{{author.first}} {{author.last}}</em>
-          {%- else -%}
-            {%- if coauthor_url -%}
-              <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
+            {%- if entry.author_equal_contribution contains author.last -%}
+              <em><b>{{author.first}} {{author.last}}</b></em><span class="star" style='color: var(--global-theme-color);'>*</span>
             {%- else -%}
-              {{author.first}} {{author.last}}
+              <em><b>{{author.first}} {{author.last}}</b></em>
+            {%- endif -%}
+          {%- else -%}
+            {%- if entry.author_equal_contribution contains author.last -%}
+              {%- if coauthor_url -%}
+                <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a><span class="star" style='color: var(--global-theme-color);'>*</span>
+              {%- else -%}
+                {{author.first}} {{author.last}}<span class="star" style='color: var(--global-theme-color);'>*</span>
+              {%- endif -%}
+            {%- else -%}
+              {%- if coauthor_url -%}
+                <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
+              {%- else -%}
+                {{author.first}} {{author.last}}
+              {%- endif -%}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
+
         {%- assign more_authors = author_array_size | minus: author_array_limit -%}
 
         {%- assign more_authors_hide = more_authors | append: " more author" -%}
