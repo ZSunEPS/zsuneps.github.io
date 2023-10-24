@@ -9,7 +9,7 @@ nav_order: 2
 <!-- _pages/publications.md -->
 <div class="publications">
 
-<h1>articles published</h1>
+<h1>articles</h1>
 
 {% bibliography -f {{ site.scholar.bibliography }} %}
 

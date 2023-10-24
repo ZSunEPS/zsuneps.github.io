@@ -26,6 +26,9 @@
             <abbr class="badge">{{entry.abbr}}</abbr>
           {%- endif -%}
         {%- endif -%}
+        {%- if entry.comment -%}
+            <span class="award badge">{{entry.comment}}</span>
+        {%- endif -%}
         </div>
         {%- endif -%}
 
@@ -211,8 +214,19 @@
           {% assign entry_has_dimensions_badge = entry.dimensions or entry.doi or entry.pmid %}
           {% if entry_has_altmetric_badge or entry_has_dimensions_badge %}
           <div class="badges">
+            {%- if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
+              <span class="__dimensions_badge_embed__" data-hide-zero-citations="true" data-style="small_rectangle"  style="margin-bottom: 3px;"
+              {% if entry.doi %}
+                data-doi="{{ entry.doi }}"
+              {% else if entry.pmid %}
+                data-pmid="{{ entry.pmid }}"
+              {% else %}
+                data-id="{{ entry.dimensions }}"
+              {% endif %}
+              ></span>
+            {%- endif %}
             {%- if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="4" data-badge-popover="right"
               {% if entry.eprint %}
                 data-arxiv-id="{{ entry.eprint }}"
               {% elsif entry.doi %}
@@ -225,17 +239,6 @@
                 data-isbn="{{ entry.isbn }}"
               {% endif %}
               ></span>
-            {%- endif %}
-            {%- if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
-              <span class="__dimensions_badge_embed__"
-              {% if entry.doi %}
-                data-doi="{{ entry.doi }}"
-              {% else if entry.pmid %}
-                data-pmid="{{ entry.pmid }}"
-              {% else %}
-                data-id="{{ entry.dimensions }}"
-              {% endif %}
-              data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
             {%- endif %}
           </div>
           {%- endif %}
