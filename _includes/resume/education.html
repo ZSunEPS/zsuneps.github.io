@@ -33,12 +33,35 @@
           </tbody>
         </table>
       </div>
-      <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+      <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
         <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="{{ content.url }}">{{content.studyType}}</a></h6>
-        <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;">{{content.institution}}</h6>
+        <table class = "table-cv ml-1 ml-md-4 institution">
+          <tbody>
+            <tr>
+              <td style="vertical-align: top; text-align: center;" class = "institution" >
+                <i class="fas fa-university iconinstitution">&emsp;</i>
+              </td>
+              <td class = "institution" style="font-style: regular;">{{content.institution}}</td>
+            </tr>
+          </tbody>
+        </table>
         <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic;">{{content.area}}</h6>
-        <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;">Thesis: {{content.thesis}}</h6>
-        <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;">Advisor: {{content.advisor}}</h6>
+        <table class = "table-cv ml-1 ml-md-4 thesis">
+          <tbody>
+            <tr>
+              <td class = "thesis" style="font-style: regular;vertical-align: top;">Thesis:&emsp;</td>
+              <td class = "thesis" style="font-style: regular;">{{content.thesis}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class = "table-cv ml-1 ml-md-4 thesis">
+          <tbody>
+            <tr>
+              <td class = "advisor" style="font-style: regular;vertical-align: top;">Advisor:&ensp;</td>
+              <td class = "advisor" style="font-style: regular;">{{content.advisor}}</td>
+            </tr>
+          </tbody>
+        </table>
         <ul class="items">
           {% for item in content.courses %}
           <li>
