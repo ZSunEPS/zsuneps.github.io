@@ -689,11 +689,18 @@ footer.sticky-bottom {
           }
         }
         
-        .award {
+        .status {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
         }
+
+        .award {
+          
+          color: var(--global-award-color) !important;
+          border: 1px solid var(--global-award-color);
+        }
       }
+      
 
       .title {
         font-weight: bolder;
