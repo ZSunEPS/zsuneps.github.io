@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: clumped and isotope, bond reordering, thermal history and paleos
+subtitle: clumped and stable isotopes, C-O bond reordering, thermal history and paleoclimate
 profile:
   align: right
   image: prof_pic.jpg
