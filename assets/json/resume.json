@@ -46,7 +46,7 @@
       "startDate": "2017",
       "endDate": "2024",
       "thesis": "Carbonate clumped isotope reordering from atomic approach: heating experiment, kinetic modeling and application.",
-      "advisor": "Ethan L. Grossman",
+      "advisor": "Ethan Grossman",
       "score": "",
       "courses": [
         
@@ -67,23 +67,39 @@
       ]
     }
   ],
+  "Professional Experience": [
+    {
+      "institution": "Department of Geology & Geophysics, Texas A&M University",
+      "url": "https://geogeo.tamu.edu/",
+      "area": "",
+      "studyType": "Graduate Assistantship Research in Clumped Isotope Geochemistry",
+      "startDate": "2017",
+      "endDate": "2020",
+      "advisor": "Ethan Grossman",
+      "coadvisor": "William Defliese"
+    },
+    {
+      "institution": "Department of Earth and Planetary Sciences, Yale University",
+      "url": "https://earth.yale.edu/",
+      "area": "",
+      "studyType": "Research Internship in Geochemistry",
+      "startDate": "2016",
+      "endDate": "2016",
+      "advisor": "Noah Planavsky",
+      "coadvisor": "Xiangli Wang"
+    }
+  ],
   "awards": [
     {
       "title": "ConcocoPhillips/HEEP Endowed Graduate Fellowship",
       "date": "2022",
-      "awarder": "College of Geosciences, Geology and Geophysics",
+      "awarder": "Department of Geology and Geophysics, TAMU",
       "summary": ""
     },
     {
       "title": "Berg-Hughes Center for Petroleum and Sedimentary Systems Scholarship",
       "date": "2018",
-      "awarder": "Berg-Hughes Center",
-      "summary": ""
-    },
-    {
-      "title": "Graduate Assistantship Research in Clumped Isotope Geochemistry",
-      "date": "2017-2020",
-      "awarder": "Michel T. Halbouty Chair in Geology",
+      "awarder": "Berg-Hughes Center, TAMU",
       "summary": ""
     }
   ],
@@ -91,12 +107,12 @@
   "publications": [],
   "skills": [
     {
-      "name": "Instrument",
+      "name": "Instrument Operation & Maintenance",
       "keywords": ["253Plus IRMS", "Kiel IV Carbonate Device", "Field Emission SEM", "Cathodoluminescence Microscope", "Mannual Glass Vaccum Line"]
     },
     {
-      "name": "Coding",
-      "keywords": ["Julia", "Python", "Matlab"]
+      "name": "Scientific Computation & Programming",
+      "keywords": ["Julia, Python, MATLAB"]
     }
   ],
   "languages": [],
