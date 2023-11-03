@@ -1,0 +1,72 @@
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% assign prof_experience = data[1] | sort: 'startDate' | reverse %}
+  {% for content in prof_experience %}
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
+        {% if content.startDate and content.startDate!="" %}
+        {% assign startDate = content.startDate | split: "-" | slice: 0,2 | join: "." %}
+        {% assign endDate   = content.endDate   | split: "-" | slice: 0,2 | join: "." | default: "Present" %}
+        {% assign date = startDate | append: " - "%}
+        {% assign date = date | append: endDate %}
+        {% else %}
+        {% assign date = null %}
+        {% endif %}
+        <table class="table-cv">
+          <tbody>
+            <tr>
+              <td>
+                {% if date %}
+                <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px;">
+                  {% if startDate == endDate %}
+                    {{startDate}}
+                  {% else %}
+                    {{date}}
+                  {% endif %}
+                </span>
+                {% endif %}
+              </td>
+            </tr>
+            {% if content.location %}
+            <tr>
+              <td>
+                <p class="location"><i class="fas fa-map-marker-alt iconlocation"></i> {{ content.location }}</p>
+              </td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+        <h6 class="title font-weight-bold ml-1 ml-md-4"><a href="{{ content.url }}">{{content.studyType}}</a></h6>
+        <table class = "table-cv ml-1 ml-md-4 institution">
+          <tbody>
+            <tr>
+              <td style="vertical-align: top; text-align: center;" class = "institution" >
+                <i class="fas fa-university iconinstitution">&emsp;</i>
+              </td>
+              <td class = "institution" style="font-style: regular;">{{content.institution}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class = "table-cv ml-1 ml-md-4 thesis">
+          <tbody>
+            <tr>
+              <td class = "advisor" style="font-style: regular;vertical-align: top;">Advisor: &ensp;&ensp;&ensp;</td>
+              <td class = "advisor" style="font-style: regular;">{{content.advisor}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class = "table-cv ml-1 ml-md-4 thesis">
+          <tbody>
+            <tr>
+              <td class = "advisor" style="font-style: regular;vertical-align: top;">Co-advisor:&ensp;</td>
+              <td class = "advisor" style="font-style: regular;">{{content.coadvisor}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
