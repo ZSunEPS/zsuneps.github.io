@@ -11,6 +11,10 @@ nav_order: 2
 
 <h1>articles</h1>
 
-{% bibliography -f {{ site.scholar.bibliography }} %}
+{% bibliography -f papers %}
+
+<h1>conference presentations</h1>
+
+{% bibliography -f conference %}
 
 </div>
