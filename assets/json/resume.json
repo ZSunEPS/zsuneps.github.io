@@ -45,7 +45,7 @@
       "studyType": "Ph.D. in Geology",
       "startDate": "2017",
       "endDate": "2024",
-      "thesis": "Carbonate clumped isotope reordering from atomic approach: heating experiment, kinetic modeling and application.",
+      "thesis": "Carbonate clumped isotope reordering from an atomic approach: heating experiment, kinetic modeling, and application.",
       "advisor": "Ethan Grossman",
       "score": "",
       "courses": [
@@ -59,7 +59,7 @@
       "studyType": "B.S. in Geology",
       "startDate": "2013",
       "endDate": "2017",
-      "thesis": "The geochemical features of carbonates from Gaoyuzhuang Formation and Tieling Formation of North China: Implications for the redox conditions of paleo-ocean.",
+      "thesis": "Geochemical features of carbonates from Gaoyuzhuang Formation and Tieling Formation of North China: Implications for the redox conditions of paleo-ocean.",
       "advisor": "Hong-Fei Ling",
       "score": "",
       "courses": [
@@ -70,11 +70,11 @@
   "Professional Experience": [
     {
       "institution": "Department of Geology & Geophysics, Texas A&M University",
-      "url": "https://geogeo.tamu.edu/",
+      "url": "https://artsci.tamu.edu/geology-geophysics/index.html",
       "area": "",
-      "studyType": "Graduate Assistantship Research in Clumped Isotope Geochemistry",
+      "studyType": "Graduate Assistant Researcher in Clumped Isotope Geochemistry",
       "startDate": "2017",
-      "endDate": "2020",
+      "endDate": "2024",
       "advisor": "Ethan Grossman",
       "coadvisor": "William Defliese"
     },
@@ -82,7 +82,7 @@
       "institution": "Department of Earth and Planetary Sciences, Yale University",
       "url": "https://earth.yale.edu/",
       "area": "",
-      "studyType": "Research Internship in Geochemistry",
+      "studyType": "Research Internship in Metal Isotope Geochemistry",
       "startDate": "2016",
       "endDate": "2016",
       "advisor": "Noah Planavsky",
@@ -91,15 +91,39 @@
   ],
   "awards": [
     {
-      "title": "ConcocoPhillips/HEEP Endowed Graduate Fellowship",
+      "title": "Student Research Award (2nd Place)",
+      "date": "2024",
+      "awarder": "Geology and Geophysics Graduate Society Symposium, TAMU",
+      "summary": ""
+    },
+    {
+      "title": "ConocoPhillips/HEEP Endowed Graduate Fellowship",
       "date": "2022",
       "awarder": "Department of Geology and Geophysics, TAMU",
       "summary": ""
     },
     {
-      "title": "Berg-Hughes Center for Petroleum and Sedimentary Systems Scholarship",
+      "title": "Petroleum and Sedimentary Systems Scholarship",
       "date": "2018",
       "awarder": "Berg-Hughes Center, TAMU",
+      "summary": ""
+    },
+    {
+      "title": "Honor of Outstanding Graduate",
+      "date": "2017",
+      "awarder": "Nanjing University (NJU)",
+      "summary": ""
+    },
+    {
+      "title": "Pandeng Earth Sciences Scholarship",
+      "date": "2015",
+      "awarder": "NJU and Institute of Geology and Geophysics, Chinese Academy of Sciences",
+      "summary": ""
+    },
+    {
+      "title": "Qihang Earth Sciences Scholarship",
+      "date": "2014",
+      "awarder": "School of Earth Sciences and Engineering, NJU",
       "summary": ""
     }
   ],
@@ -108,7 +132,7 @@
   "skills": [
     {
       "name": "Instrument Technique",
-      "keywords": ["253Plus IRMS", "Kiel IV Carbonate Device", "Field Emission SEM", "Cathodoluminescence Microscope", "Manual Glass Vacuum Line"]
+      "keywords": ["253Plus IRMS", "Kiel IV Carbonate Device", "TC/EA-IRMS", "Field Emission SEM", "Cathodoluminescence Microscope", "Manual Glass Vacuum Line"]
     },
     {
       "name": "Scientific Computation & Programming",
